@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void generateDataList(List<RetroPhoto> photoList) {
         recyclerView = findViewById(R.id.customRecyclerView);
-        recyclerView.setSoundEffectsEnabled(false);
+
         adapter = new CustomAdapter(this, photoList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);

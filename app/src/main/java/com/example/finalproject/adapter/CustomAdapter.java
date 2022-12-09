@@ -38,7 +38,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         CustomViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
-
+            mView.setSoundEffectsEnabled(false);
             txtTitle = mView.findViewById(R.id.title);
             coverImage = mView.findViewById(R.id.coverImage);
 

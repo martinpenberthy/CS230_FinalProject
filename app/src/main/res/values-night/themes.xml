@@ -8,6 +8,5 @@
         <!-- Customize your theme here. -->
 
 
-        <item name="android:soundEffectsEnabled">false</item>
     </style>
 </resources>
