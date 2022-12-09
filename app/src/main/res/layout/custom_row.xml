@@ -8,7 +8,7 @@
     card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="333dp"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -27,14 +27,14 @@
             style="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/coverImage"
             android:layout_toRightOf="@+id/coverImage"
             android:lines="2"
             android:paddingTop="20dp"
-            android:text="title"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/coverImage"
-/>
+            android:text="title" />
+
 
     </RelativeLayout>
 

@@ -83,7 +83,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                 holder.txtTitle.setText("Beatbox");
                 break;
             default:
-                holder.txtTitle.setText(dataList.get(position).getTitle());
+                //holder.txtTitle.setText(dataList.get(position).getTitle());
+                holder.txtTitle.setText("Random");
                 break;
         }
         Picasso.Builder builder = new Picasso.Builder(context);

@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.finalproject.activity.MainActivity">
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customRecyclerView"
         android:layout_width="match_parent"
@@ -14,6 +16,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintVertical_bias="0.0" >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ import com.example.finalproject.network.GetDataService;
 import com.example.finalproject.network.RetrofitClientInstance;
 
 import java.util.List;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private int sound1_kick, sound2_snare, sound3_hat, sound4_vox, sound5_glitch, sound6_beatbox;
 
+    //Implement a View onClickListener
     private View.OnClickListener onItemClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
         }
 
+        //Load sounds
         sound1_kick = soundPool.load(this, R.raw.sound1_kick, 1);
         sound2_snare = soundPool.load(this, R.raw.sound2_snare, 1);
         sound3_hat = soundPool.load(this, R.raw.sound3_hat, 1);
@@ -127,12 +130,13 @@ public class MainActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(onItemClickListener);
     }
 
-
+    //Handle sound events
     public void playSound(int position)
     {
         switch(position)
         {
             case 0:
+
                 soundPool.play(sound1_kick, 1.0f, 1.0f, 0, 0, 1);
                 break;
 
@@ -156,6 +160,40 @@ public class MainActivity extends AppCompatActivity {
                 soundPool.play(sound6_beatbox, 1.0f, 1.0f, 0, 0, 1);
                 break;
             default:
+                Random rand = new Random();
+                int randValue = rand.nextInt(6);
+                Log.d("Debug", "RandValue");
+                Log.d("Debug", String.valueOf(randValue));
+                switch(randValue) {
+                    case 0:
+
+                        soundPool.play(sound1_kick, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    case 1:
+                        soundPool.play(sound2_snare, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    case 2:
+                        soundPool.play(sound3_hat, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    case 3:
+                        soundPool.play(sound4_vox, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    case 4:
+                        soundPool.play(sound5_glitch, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    case 5:
+                        soundPool.play(sound6_beatbox, 1.0f, 1.0f, 0, 0, 1);
+                        break;
+
+                    default:
+                        break;
+                }
+
                 break;
         }
     }
